@@ -1,0 +1,65 @@
+version: "3.1"
+
+intents:
+  - greet
+  - order_size
+  - order_quantity
+  - goodbye
+  - bot_challenge
+  - order_item
+  - finish
+  - confirm
+  - thankyou
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+
+  utter_ask_size:
+  - text: "What size do you need?"
+
+  utter_ask_quantity:
+    - text: "How many?"
+
+  utter_next:
+    - text: "Anything else?"
+
+  utter_confirm:
+  - text: "This is your order. Do you confirm?"
+
+  utter_orderpalced:
+  - text: "Your order is placed"
+
+  utter_welcome:
+  - text: "You are welcome"
+
+  utter_goodbye:
+  - text: "Bye"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+#  - save_order_action
+  - action_update_entities
+  - action_clear_file
+  - utter_greet
+  - utter_ask_size
+  - utter_ask_quantity
+  - utter_next
+  - utter_confirm
+  - utter_goodbye
+  - utter_orderpalced
+  - utter_welcome
+
+entities:
+  - menu_item
+
+#slots:
+#  BEVERAGE:
+#    type: text
+#    influence_conversation: true
+#    mappings:
+#      - type: from_entity
+#        entity: BEVERAGE

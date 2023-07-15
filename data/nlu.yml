@@ -1,0 +1,88 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: order_item
+  examples: |
+    - Can I get [two large Coffees](menu_item) please?
+    - Can I get [three medium Coffees](menu_item) please?
+    - Can I get [a large Coffee](menu_item)?
+    - Can I get [four small Coffees](menu_item) please?
+    - I need [a medium Coffee](menu_item)
+    - I'll have [six large Coffees](menu_item) 
+    - I want [five small Coffees](menu_item) 
+    - We need [two large Coffees](menu_item) please?
+    - Can I get [three medium Coffees](menu_item) please?
+    - Can I get [a small Coffee](menu_item)?
+    - Can I get [four large Coffees](menu_item) please?
+    - I need [a medium Coffee](menu_item)
+    - I'll have [six small Coffees](menu_item) 
+    - I want [five medium Coffees](menu_item) 
+    - I would like [a large Coffee](menu_item) and [two small Lattes](menu_item), please."
+    - Can I have [three medium Coffees](menu_item) and [a small Latte](menu_item), please?"
+    - I'll take [two small Lattes](menu_item) and [a large Coffee](menu_item), please."
+    - Could I get [a medium Coffee](menu_item) and [two large Lattes](menu_item), please?"
+    - I'd like [a small Latte](menu_item), [two medium Coffees](menu_item), and [a large Coffee](menu_item)."
+    - May I have [two small Coffees](menu_item) and [a medium Latte](menu_item), please?"
+
+- intent: order_quantity
+  examples: |
+    - [one](menu_item) please
+    - [two](menu_item) please
+    - [three](menu_item) please
+    - [four](menu_item) please
+    - [five](menu_item) please
+
+- intent: order_size
+  examples: |
+    - [large](menu_item) please
+    - [medium](menu_item) please
+    - [small](menu_item) please
+
+- intent: finish
+  examples: |
+    - No
+    - Not that's it
+    - That's all. Thanks
+    - That would be it
+    - That's it thank you
+
+- intent: confirm
+  examples: |
+    - Yes
+    - Confirmed
+    - Okay
+    - Ok
+
+- intent: thankyou
+  examples: |
+    - thank you
+    - thanks
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later

@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+
+#- story: Saving order to cart
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: order_item # Need to find a way to repeat this
+#  - action: action_update_entities
+#  - action: utter_next
+#  - intent: finish
+#  - action: utter_confirm #This needs to be replaced by utter_confirm then the action to confirm
+#  - intent: confirm
+#  - action: utter_orderpalced
+
+- story: Saving order to cart update size
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_clear_file
+  - intent: order_item # Need to find a way to repeat this
+#  - action: save_order_action
+  - action: action_update_entities
+  - intent: order_size
+  - action: action_update_entities
+#  - action: action_write_entities
+#  - action: save_order_action
+  - intent: finish
+  - action: utter_confirm #This needs to be replaced by utter_confirm then the action to confirm
+  - intent: confirm
+  - action: utter_orderpalced
+
+- story: Saving order to cart update quantity
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_clear_file
+  - intent: order_item # Need to find a way to repeat this
+  - action: action_update_entities
+  - intent: order_quantity
+  - action: action_update_entities
+#  - action: action_write_entities
+#  - action: save_order_action
+  - intent: finish
+  - action: utter_confirm #This needs to be replaced by utter_confirm then the action to confirm
+  - intent: confirm
+  - action: utter_orderpalced
+
+
+#  - intent: action_write_entities
+#  - action: utter_next
+#  - intent: finish
+#  - action: utter_confirm #This needs to be replaced by utter_confirm then the action to confirm
+#  - intent: confirm
+#  - action: utter_orderpalced
+#
+#- story: Saving order to cart update type
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: order_item # Need to find a way to repeat this
+#  - action: action_update_entities
+#  - action: utter_ask_type
+#  - intent: order_type
+#  - action: action_write_entities
+#  - action: utter_next
+#  - intent: finish
+#  - action: utter_confirm #This needs to be replaced by utter_confirm then the action to confirm
+#  - intent: confirm
+#  - action: utter_orderpalced
+#
+#- story: Saving order to cart update qauantity
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: order_item # Need to find a way to repeat this
+#  - action: action_update_entities
+#  - action: utter_ask_qauantity
+#  - intent: order_quantity
+#  - action: action_write_entities
+#  - action: utter_next
+#  - intent: finish
+#  - action: utter_confirm #This needs to be replaced by utter_confirm then the action to confirm
+#  - intent: confirm
+#  - action: utter_orderpalced
